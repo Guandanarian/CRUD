@@ -21,7 +21,6 @@ namespace CRUD
             while (isAlive)
             {
                 Console.WriteLine("");
-
                 Console.WriteLine("Lab 4:");
                 Console.WriteLine("1. Dodaj");
                 Console.WriteLine("2. Wyświetl wszystkich użytkowników");
