@@ -22,14 +22,12 @@ namespace CRUD
             {
                 Console.WriteLine("");
 
-                Console.WriteLine("CRUD");
-                Console.WriteLine("~~~~Menu~~~~");
-                Console.WriteLine("1) Dodaj");
-                Console.WriteLine("2) Wyświetl wszystkich użytkowników");
-                Console.WriteLine("3) Modyfikuj");
-                Console.WriteLine("4) Usuń");
-                Console.WriteLine("5) Zamknij");
-                Console.WriteLine("Podaj wybór - liczbę z listy poniżej.");
+                Console.WriteLine("Lab 4:");
+                Console.WriteLine("1. Dodaj");
+                Console.WriteLine("2. Wyświetl wszystkich użytkowników");
+                Console.WriteLine("3. Modyfikuj");
+                Console.WriteLine("4. Usuń");
+                Console.WriteLine("5. Zamknij");
 
                 var data = Console.ReadLine();
 
@@ -52,12 +50,12 @@ namespace CRUD
 
                     foreach (var user in users)
                     {
-                        Console.WriteLine("------------");
+                        Console.WriteLine("");
                         Console.WriteLine("Id: " + user.Id);
                         Console.WriteLine("Imię: " + user.Name);
                         Console.WriteLine("Nazwisko: " + user.Surname);
                         Console.WriteLine("Wiek: " + user.Age);
-                        Console.WriteLine("------------");
+                        Console.WriteLine("");
                     }
                 }
                 else if (data == "3") //Edit values
@@ -66,10 +64,10 @@ namespace CRUD
 
                     var id = Console.ReadLine();
 
-                    Console.WriteLine("Wybierz wartość, która ma być modyfikowana");
-                    Console.WriteLine("1) Imie");
-                    Console.WriteLine("2) Nazwisko");
-                    Console.WriteLine("3) Wiek");
+                    Console.WriteLine("Wybierz pole edycji:");
+                    Console.WriteLine("1. Imie");
+                    Console.WriteLine("2. Nazwisko");
+                    Console.WriteLine("3. Wiek");
 
                     data = Console.ReadLine();
                     
@@ -88,7 +86,7 @@ namespace CRUD
 
                     db.UpdateValue(columnName, value, "Id", id);
 
-                    Console.WriteLine("Zmodyfikowano pomyślnie");
+                    Console.WriteLine("Zmodyfikowano pomyslnie");
                 }
                 else if (data == "4") //Delete value
                 {
